@@ -23,9 +23,12 @@ fun main() {
             }
             println("READ DATA $input")
 
+            // Header
             printer.println("HTTP/1.1 200 0K")
             printer.println("Content-Type: text/html\r\n")
-            printer.println("<h1>Hello world</h1>")
+
+            // Body
+            printer.println("{\"message\": \"Hello world\"}")
             printer.println("\r\n")
             printer.flush()
             printer.close()
